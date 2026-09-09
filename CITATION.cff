@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite both the software itself and the
+  paper it accompanies.
+title: >-
+  Device-error multiple imputation and Rubin pooling for longitudinal
+  actigraphy
+abstract: >-
+  Reference implementation of a non-parametric multiple-imputation procedure
+  that propagates the measurement difference between two actigraphy systems
+  into every estimate of a longitudinal mixed model. Device differences are
+  resampled from the empirical distribution of paired concurrent-wear
+  differences, the model is refitted once per imputation, and results are
+  combined by Rubin's rules so that the instrument uncertainty is carried
+  through into all standard errors and confidence intervals. Includes the
+  206 paired concurrent-wear differences (22 volunteers, Philips Actiwatch
+  versus Axivity AX3) that the published analysis resamples from, released
+  under CC BY 4.0.
+type: software
+license: MIT
+version: 1.1.0
+date-released: "2026-08-27"
+keywords:
+  - actigraphy
+  - multiple imputation
+  - Rubin's rules
+  - measurement error
+  - mixed models
+  - sleep
+  - device comparison
+  - Axivity AX3
+  - Actiwatch
+authors:
+  - family-names: Casiraghi
+    given-names: Leandro
+preferred-citation:
+  type: article
+  title: >-
+    Modern Times: Longitudinal Study of Toba/Qom Communities Reveals Delay
+    and Shortening of Sleep in Real-Time
+  journal: Current Biology
+  year: 2026
+  authors:
+    - family-names: Casiraghi
+      given-names: Leandro
