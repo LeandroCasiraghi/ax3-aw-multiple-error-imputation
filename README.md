@@ -34,7 +34,6 @@ result. Every effect reported in the paper survives it.
 | `demo_synthetic.R` | Runnable worked example on entirely synthetic data. Requires no external files. |
 | `demo_real.R` | The same worked example driven by the **measured** device differences in `data/`. |
 | `data/device_comparison.csv` | The 206 paired concurrent-wear differences used in the paper. See `data/README.md`. |
-| `CHECKSUMS.txt` | SHA-256 manifest of every file in this deposit. |
 
 ## Licensing
 
