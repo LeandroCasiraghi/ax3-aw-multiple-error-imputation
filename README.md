@@ -3,13 +3,13 @@
 Reference implementation of the measurement-error correction used in:
 
 > Casiraghi et al. *Modern Times: Longitudinal Study of Toba/Qom Communities
-> Reveals Delay and Shortening of Sleep in Real-Time.* Current Biology.
+> Reveals Delay and Shortening of Sleep in Real-Time.* Current Biology, 2026.
 
 ## What this is
 
 Sleep episodes in this study were recorded with two different actigraphy
-systems: a Philips Respironics Actiwatch scored with Actiware (2012–2018) and
-an Axivity AX3 scored with GGIR (2023–2024). Because the change of instrument
+systems: a Philips Respironics Actiwatch scored with Actiware 6 (2012–2018) and
+an Axivity AX3 scored with GGIR 3.2.6 (2023–2024). Because the change of instrument
 coincides with the passage of time, any difference between the two systems is
 perfectly confounded with the temporal trend that the study set out to measure.
 
@@ -53,7 +53,7 @@ Requires `lme4`; `emmeans` is optional and used only for the final section.
 
 The demo generates a synthetic dataset with the study's structure — two
 communities, unbalanced longitudinal follow-up, a device switch partway
-through, and a known true effect of +0.09 h/year — and compares three
+through, and a known true effect of +0.090 h/year — and compares three
 analyses. Representative output:
 
 ```
@@ -128,19 +128,6 @@ regime in which the two coincide.
 Seeds are fixed (`seed = 123` in the paper's analyses), so results are exactly
 reproducible. `run_mi_analysis()` returns the settings actually used, together
 with counts of singular fits and warnings, in its `settings` element.
-
-## Verification
-
-This implementation was checked against the analysis code used to produce the
-published results, on the real dataset:
-
-- **Pooling equivalence** — the refactored functions and the original inline
-  implementation, applied to the same 100 fitted models, agree to a maximum
-  absolute difference of `0e+00` across all estimates, standard errors,
-  confidence limits, *t* statistics and *p* values.
-- **End-to-end** — running the full imputation loop through
-  `run_mi_analysis()` reproduces all 13 published fixed-effect coefficients and
-  standard errors for the sleep-onset model exactly, at the precision reported.
 
 ## Data
 
